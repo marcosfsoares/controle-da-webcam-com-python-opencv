@@ -1,7 +1,6 @@
 import cv2 as cv  # pacote opencv-python
 # opencv depende também do pacote numpy
 
-
 webcam = cv.VideoCapture(0)
 
 if webcam.isOpened():
@@ -15,6 +14,6 @@ if webcam.isOpened():
         if key == 27:  # ESC
             break
     cv.imwrite("FotoMarcos.png", frame)
-
+print("Webcam Desconectada.")
 webcam.release()
 cv.destroyAllWindows()
